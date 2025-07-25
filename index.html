@@ -1,38 +1,59 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>I am CRK</title>
-  <link href="style.css" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rejaul Karim Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>I am Rejaul Karim</h1>
-    <p>Welcome to my personal website 🌐</p>
-  </header>
+  <div class="toggle-switch" id="toggleSwitch" title="Toggle Light/Dark Mode">
+    <i class="fas fa-moon"></i>
+  </div>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a passionate developer exploring web technologies, coding, and creative ideas.</p>
-  </section>
+  <div class="container">
+    <h1>Hi! I am Rejaul Karim</h1>
+    <p class="bio">I enjoy programming and have a strong interest in learning new things.</p>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>✅ Employee Management System</li>
-      <li>✅ Attendance Tracker</li>
-      <li>✅ Salary Management</li>
-    </ul>
-  </section>
+    <div class="links">
+      <a href="https://github.com/RejaulKarim64" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/c-m-rejaul-karim" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:cmrejaulkarim@gmail.com" title="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:cmrejaulkarim@gmail.com" style="text-decoration: none;">cmrejaulkarim@gmail.com</a></p>
-  </section>
+    <div class="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>HR Management System</li>
+        <li>Point of Sale (POS)</li>
+        <li>Banking Software</li>
+      </ul>
+    </div>
+  </div>
 
-  <footer>
-    <p>© 2025 iamcrk.me — All rights reserved.</p>
-  </footer>
+  <script>
+    const toggleSwitch = document.getElementById('toggleSwitch');
+    const body = document.body;
+    const icon = toggleSwitch.querySelector('i');
+
+    toggleSwitch.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      if (body.classList.contains('dark')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
+    });
+  </script>
 </body>
 </html>
