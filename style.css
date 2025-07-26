@@ -1,9 +1,8 @@
-/* style.css */
-
+/* Base styles */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Verdana', Verdana;
   background: linear-gradient(120deg, #f0f4ff, #e4f1ff);
   color: #333;
   transition: background 0.4s, color 0.4s;
@@ -15,6 +14,7 @@ body.dark {
   color: #eee;
 }
 
+/* Container */
 .container {
   max-width: 960px;
   margin: auto;
@@ -22,6 +22,7 @@ body.dark {
   text-align: center;
 }
 
+/* Headings */
 h1 {
   font-size: 3rem;
   margin-bottom: 0.3em;
@@ -37,17 +38,98 @@ body.dark .bio {
   color: #ccc;
 }
 
+/* Toggle Theme Button */
+.toggle-switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  padding: 10px;
+  transition: background 0.3s;
+  z-index: 1000;
+}
+
+.toggle-switch:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+body.dark .toggle-switch {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Animated icon inside toggle */
+.toggle-switch i {
+  display: inline-block;
+  transition: transform 0.02s ease;
+}
+
+body.dark .toggle-switch i {
+  transform: rotate(180deg) scale(1.2);
+}
+
+/* Social Links */
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
 .links a {
-  margin: 0 15px;
   font-size: 2rem;
   color: inherit;
-  transition: transform 0.3s;
+  position: relative;
+  transition: transform 0.3s, color 0.3s;
 }
 
+/* Brand hover colors */
+.links a[title="GitHub"]:hover {
+  color: #24292e;
+}
+
+.links a[title="LinkedIn"]:hover {
+  color: #0077b5;
+}
+
+.links a[title="Email"]:hover {
+  color: #c23a2b;
+}
+
+/* Icon scale + underline */
 .links a:hover {
-  transform: scale(1.2);
+  transform: scale(1.5);
 }
 
+/* Underline hover effect for links */
+.links a::after,
+.projects a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transform: translateX(-50%);
+  transition: width 0.9s ease-in-out;
+}
+
+.links a:hover::after,
+.projects a:hover::after {
+  width: 100%;
+}
+
+
+.links a:hover::after,
+.projects a:hover::after {
+  width: 100%;
+}
+
+/* Projects Section */
 .projects {
   margin-top: 3rem;
 }
@@ -64,25 +146,74 @@ body.dark .bio {
 }
 
 .projects li {
-  margin: 0.5em 0;
+  margin: 0.7em 0;
 }
 
-.toggle-switch {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  font-size: 1.4rem;
-  cursor: pointer;
-  background: rgba(0,0,0,0.05);
-  border-radius: 50%;
-  padding: 10px;
-  transition: background 0.3s;
+/* Project links with color + hover effect */
+.projects a {
+  color: #2b6cb0;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.toggle-switch:hover {
-  background: rgba(0,0,0,0.1);
+.projects a:hover {
+  color: #06d945;
+  transform: scale(1.05);
 }
 
-body.dark .toggle-switch {
-  background: rgba(255,255,255,0.1);
+/* Responsive Layout */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .bio {
+    font-size: 1.05rem;
+  }
+
+  .projects h2 {
+    font-size: 1.6rem;
+  }
+
+  .projects ul {
+    font-size: 1rem;
+  }
+
+  .toggle-switch {
+    font-size: 1.2rem;
+    padding: 8px;
+    top: 15px;
+    right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 40px 15px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .bio {
+    font-size: 1rem;
+  }
+
+  .links {
+    gap: 15px;
+  }
+
+  .links a {
+    font-size: 1.6rem;
+  }
+
+  .projects h2 {
+    font-size: 1.4rem;
+  }
+
+  .projects ul {
+    font-size: 0.95rem;
+  }
 }
