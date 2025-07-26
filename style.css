@@ -63,12 +63,23 @@ body.dark .toggle-switch {
 /* Animated icon inside toggle */
 .toggle-switch i {
   display: inline-block;
+  transition: transform 0.5s ease, color 0.3s ease;
+  transform-origin: center;
+}
+
+body.dark .toggle-switch i {
+  transform: rotate(180deg) scale(1.2);
+  color: #fdd835; /* optional: yellowish in dark mode for contrast */
+}
+
+/* .toggle-switch i {
+  display: inline-block;
   transition: transform 0.02s ease;
 }
 
 body.dark .toggle-switch i {
   transform: rotate(180deg) scale(1.2);
-}
+} */
 
 /* Social Links */
 .links {
@@ -88,7 +99,7 @@ body.dark .toggle-switch i {
 
 /* Brand hover colors */
 .links a[title="GitHub"]:hover {
-  color: #24292e;
+  color: #626466;
 }
 
 .links a[title="LinkedIn"]:hover {
@@ -96,7 +107,7 @@ body.dark .toggle-switch i {
 }
 
 .links a[title="Email"]:hover {
-  color: #c23a2b;
+  color: #c23a2bbe;
 }
 
 /* Icon scale + underline */
