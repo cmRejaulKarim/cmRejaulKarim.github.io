@@ -69,17 +69,9 @@ body.dark .toggle-switch {
 
 body.dark .toggle-switch i {
   transform: rotate(180deg) scale(1.2);
-  color: #fdd835; /* optional: yellowish in dark mode for contrast */
+  color: #fdd835;
+  /* optional: yellowish in dark mode for contrast */
 }
-
-/* .toggle-switch i {
-  display: inline-block;
-  transition: transform 0.02s ease;
-}
-
-body.dark .toggle-switch i {
-  transform: rotate(180deg) scale(1.2);
-} */
 
 /* Social Links */
 .links {
