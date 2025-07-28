@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio website hosted with GitHub Pages!
 
-🔗 Live Site: [iamcrk.me](https://iamcrk.me)
+🔗 Live Site: [RejaulKarim64.github.io](https://iamcrk.me)
 
 ---
 
