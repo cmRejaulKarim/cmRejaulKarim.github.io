@@ -38,6 +38,16 @@ body.dark .bio {
   color: #ccc;
 }
 
+h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #2c03c2ad;
+}
+body.dark h3 {
+  color: #ddd;
+}
+
+
 /* Toggle Theme Button */
 .toggle-switch {
   position: fixed;
