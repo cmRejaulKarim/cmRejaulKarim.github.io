@@ -1,6 +1,6 @@
 # 👨‍💻 Rejaul Karim's Portfolio
 
-Welcome to my personal portfolio website hosted with GitHub Pages!
+Welcome to my personal portfolio website!
 
 🔗 Live Site: [RejaulKarim64.github.io](https://iamcrk.me)
 
@@ -24,7 +24,7 @@ This portfolio highlights a few of my key projects:
 
 - 🧑‍💼 **HR & Payroll Management System**
 - 🧾 **Point of Sale (POS) Software**
-- 🏦 **Banking Management Software**
+- 🏦 **Banking Website**
 
 You can find full project details and demos in the **Projects** section of the site.
 
@@ -57,7 +57,7 @@ Feel free to reach out via:
 
 - 📧 Email: cmrejaulkarim@gmail.com  
 - 🐙 GitHub: [RejaulKarim64](https://github.com/RejaulKarim64)  
-- 🔗 LinkedIn: [[LinkedIn](https://www.linkedin.com/in/c-m-rejaul-karim)]
+- 🔗 LinkedIn: [LinkedIn](https://www.linkedin.com/in/c-m-rejaul-karim)
 
 ---
 
