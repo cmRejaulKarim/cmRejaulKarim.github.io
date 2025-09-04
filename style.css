@@ -7,6 +7,21 @@ body {
   color: #333;
   transition: background 0.4s, color 0.4s;
   min-height: 100vh;
+
+  
+  overflow-y: hidden;
+  /* Always allow vertical scroll */
+  -ms-overflow-style: none;
+  /* Hide scrollbar for IE and Edge */
+  scrollbar-width: none;
+  /* Hide scrollbar for Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+  height: 0px !important;
+  width: 0px !important;
 }
 
 body.dark {
@@ -43,6 +58,7 @@ h3 {
   font-size: 1.2rem;
   color: #2c03c2ad;
 }
+
 body.dark h3 {
   color: #ddd;
 }
