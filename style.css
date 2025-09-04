@@ -14,36 +14,41 @@
   height: 0 !important;
   width: 0 !important;
 } */
- /* --- Robust: hide scrollbars but keep page scrollable --- */
- html,
- body {
-   height: 100%;
-   margin: 0;
-   padding: 0;
-   overflow-y: auto;
-   /* keep page scrollable */
-   -webkit-overflow-scrolling: touch;
-   -ms-overflow-style: none;
-   /* IE/Edge */
-   scrollbar-width: none;
-   /* Firefox */
- }
+/* --- Robust: hide scrollbars but keep page scrollable --- */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Verdana', Verdana;
+  background: linear-gradient(120deg, #f0f4ff, #e4f1ff);
+  color: #333;
+  transition: background 0.4s, color 0.4s;
 
- /* Hide webkit scrollbars (Chrome, Safari, Opera) */
- html::-webkit-scrollbar,
- body::-webkit-scrollbar {
-   width: 0 !important;
-   height: 0 !important;
-   display: none !important;
- }
+  overflow-y: auto;
+  /* keep page scrollable */
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  /* IE/Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
 
- /* Make track/thumb transparent as extra fallback */
- html::-webkit-scrollbar-track,
- body::-webkit-scrollbar-track,
- html::-webkit-scrollbar-thumb,
- body::-webkit-scrollbar-thumb {
-   background: transparent !important;
- }
+/* Hide webkit scrollbars (Chrome, Safari, Opera) */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important;
+}
+
+/* Make track/thumb transparent as extra fallback */
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track,
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: transparent !important;
+}
 
 body.dark {
   background: #121212;
