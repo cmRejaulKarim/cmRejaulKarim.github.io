@@ -56,7 +56,7 @@ This site includes:
 Feel free to reach out via:
 
 - 📧 Email: cmrejaulkarim@gmail.com  
-- 🐙 GitHub: [RejaulKarim64](https://github.com/RejaulKarim64)  
+- 🐙 GitHub: [RejaulKarim64](https://github.com/cmRejaulKarim)  
 - 🔗 LinkedIn: [LinkedIn](https://www.linkedin.com/in/c-m-rejaul-karim)
 
 ---
