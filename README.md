@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio website!
 
-🔗 Live Site: [RejaulKarim64.github.io](https://iamcrk.me)
+🔗 Live Site: [cmRejaulKarim.github.io](https://iamcrk.me)
 
 ---
 
