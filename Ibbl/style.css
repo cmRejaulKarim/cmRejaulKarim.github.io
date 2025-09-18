@@ -1,0 +1,58 @@
+html,
+body {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fa;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}  
+
+/* ===== Reset & Layout Fix ===== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* ===== Social Media Icons ===== */
+    .social-icons a {
+        margin: 0 10px;
+        font-size: 24px;
+        transition: transform 0.3s, color 0.3s;
+        text-decoration: none;
+    }
+
+    /* Platform-specific brand colors */
+    .social-icons a.facebook {
+        color: #3b5998;
+    }
+
+    .social-icons a.linkedin {
+        color: #0077b5;
+    }
+
+    .social-icons a.youtube {
+        color: #ff0000;
+    }
+
+    .social-icons a.instagram {
+        color: #e1306c;
+    }
+
+    .social-icons a.twitter {
+        color: #1da1f2;
+    }
+
+    /* Hover interaction */
+    .social-icons a:hover {
+        transform: scale(1.2);
+        filter: brightness(1.2);
+    }
