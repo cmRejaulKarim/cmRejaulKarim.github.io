@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HRMS - Human Resource Management System</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        /* Custom styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #2b8a3e 0%, #54b435 100%);
+            color: white;
+            padding: 80px 15px;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-weight: 700;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+        }
+
+        .info-section {
+            padding: 60px 15px;
+            background: white;
+        }
+
+        .info-section h3 {
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #2b8a3e;
+        }
+
+        .info-card {
+            background: #e9f5e9;
+            border-radius: 12px;
+            padding: 30px;
+            height: 100%;
+            box-shadow: 0 4px 12px rgba(43, 138, 62, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(43, 138, 62, 0.3);
+        }
+
+        footer {
+            background: #2b8a3e;
+            color: white;
+            padding: 30px 15px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #a3d9a5;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.2rem;
+        }
+
+        footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-success" href="#">HRMS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Welcome to HRMS</h1>
+            <p>Your trusted Human Resource Management System connecting candidates, employees, and investors.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <button class="btn btn-light btn-lg text-success fw-bold" data-bs-toggle="modal"
+                    data-bs-target="#cvModal">
+                    Submit Your CV
+                </button>
+                <button class="btn btn-outline-light btn-lg fw-bold" data-bs-toggle="modal"
+                    data-bs-target="#registerModal">
+                    New Employee Register
+                </button>
+                <button class="btn btn-outline-light btn-lg fw-bold" data-bs-toggle="modal"
+                    data-bs-target="#loginModal">
+                    Employee Login
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Sections -->
+    <section id="about" class="info-section text-center">
+        <div class="container">
+            <h2 class="mb-5 fw-bold text-success">About Our HRMS</h2>
+            <p class="mb-5 fs-5 mx-auto" style="max-width: 800px;">
+                Our Human Resource Management System simplifies recruitment, employee management, and investor relations
+                with innovative tools designed for efficiency and transparency.
+            </p>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="info-card">
+                        <h3>For Candidates</h3>
+                        <p>Upload your CV quickly, track your application status, and stay informed about new
+                            opportunities.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-card">
+                        <h3>For Employees</h3>
+                        <p>Register your profile, access internal resources, and manage your work and benefits with
+                            ease.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-card">
+                        <h3>For Investors</h3>
+                        <p>Get real-time insights, reports, and updates on company performance and future plans.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="info-section text-center">
+        <div class="container">
+            <h2 class="mb-5 fw-bold text-success">Get In Touch</h2>
+            <p class="mb-4 fs-5 mx-auto" style="max-width: 700px;">
+                Have questions or want to learn more about our HRMS? Reach out to us anytime!
+            </p>
+            <p>Email: <a href="mailto: cmrejaulkarim@gmail.com" class="text-success">cmrejaulkarim@gmail.com</a></p>
+            <p>Phone: <a href="tel:+1234567890" class="text-success">+1 234 567 890</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 HRMS - Human Resource Management System</p>
+            <div>
+                <a href="https://www.facebook.com/IDK.Username.mine" aria-label="Facebook" target="_blank"><i class="bi bi-facebook"></i> Facebook</a>
+                <a href="#" aria-label="Twitter" target="_blank"><i class="bi bi-twitter"></i> Twitter</a>
+                <a href="https://www.linkedin.com/in/c-m-rejaul-karim-0039161b1" aria-label="LinkedIn" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+
+    <!-- CV Upload Modal -->
+    <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form class="modal-content" id="cvForm" enctype="multipart/form-data" onsubmit="return validateCVForm()">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cvModalLabel">Submit Your CV</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="candidateName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="candidateName" name="candidateName" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="candidateEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="candidateEmail" name="candidateEmail" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="candidateCV" class="form-label">Upload CV (PDF or DOCX, max 5MB)</label>
+                        <input type="file" class="form-control" id="candidateCV" name="candidateCV"
+                            accept=".pdf,.doc,.docx" required />
+                    </div>
+                    <small class="text-muted">We respect your privacy and will keep your data secure.</small>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Submit CV</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Employee Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form class="modal-content" id="registerForm" onsubmit="return validateRegisterForm()">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Employee Registration</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="registerName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="registerName" name="registerName" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="registerEmail" name="registerEmail" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="registerPassword" name="registerPassword"
+                            required minlength="6" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="registerConfirmPassword"
+                            name="registerConfirmPassword" required minlength="6" />
+                    </div>
+                    <small class="text-muted">We'll never share your information with anyone else.</small>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Register</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Employee Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form class="modal-content" id="loginForm" onsubmit="return validateLoginForm()">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Employee Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="loginEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="loginEmail" name="loginEmail" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="loginPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="loginPassword" name="loginPassword" required
+                            minlength="6" />
+                    </div>
+                    <small class="text-muted">Forgot your password? Contact HR for assistance.</small>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Login</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Optional: Basic form validation -->
+    <script>
+        function validateCVForm() {
+            const cvInput = document.getElementById('candidateCV');
+            if (cvInput.files.length === 0) {
+                alert('Please upload your CV.');
+                return false;
+            }
+            const file = cvInput.files[0];
+            const allowedTypes = ['application/pdf', 'application/msword',
+                'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+            if (!allowedTypes.includes(file.type)) {
+                alert('Please upload a PDF or Word document.');
+                return false;
+            }
+            if (file.size > 5 * 1024 * 1024) { // 5MB
+                alert('File size must be less than 5MB.');
+                return false;
+            }
+            alert('CV submitted successfully!');
+            return true;
+        }
+
+        function validateRegisterForm() {
+            const pass = document.getElementById('registerPassword').value;
+            const confirmPass = document.getElementById('registerConfirmPassword').value;
+            if (pass !== confirmPass) {
+                alert('Passwords do not match!');
+                return false;
+            }
+            alert('Registration successful!');
+            return true;
+        }
+
+        function validateLoginForm() {
+            // Demo login validation
+            alert('Login successful!');
+            return true;
+        }
+    </script>
+</body>
+
+</html>
