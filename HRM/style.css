@@ -1,7 +1,23 @@
-/* Custom styling */
+/* Hide scrollbar while keeping scroll functionality */
+html,
 body {
+
+    height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #f8f9fa;
+
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    overflow-y: scroll;
+    /* Ensure vertical scrolling still works */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, and Opera */
 }
 
 .hero-section {
