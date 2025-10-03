@@ -7,24 +7,30 @@
     <title>HRMS - Human Resource Management System</title>
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold text-success" href="../index.html">HRMS</a>
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <i class="bi bi-building"></i> HRMS
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav gap-3">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -32,54 +38,168 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section id="home" class="hero-section">
         <div class="container">
-            <h1>Welcome to HRMS</h1>
-            <p>Your trusted Human Resource Management System connecting candidates, employees, and investors.</p>
-            <div class="d-flex justify-content-center gap-3 flex-wrap">
-                <button class="btn btn-light btn-lg text-success fw-bold" data-bs-toggle="modal"
-                    data-bs-target="#cvModal">
-                    Submit Your CV
-                </button>
-                <button class="btn btn-outline-light btn-lg fw-bold" data-bs-toggle="modal"
-                    data-bs-target="#registerModal">
-                    New Employee Register
-                </button>
-                <button class="btn btn-outline-light btn-lg fw-bold" data-bs-toggle="modal"
-                    data-bs-target="#loginModal">
-                    Employee Login
-                </button>
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to HRMS</h1>
+                <p class="hero-subtitle">Revolutionizing Human Resource Management</p>
+                <p class="hero-description">
+                    Your trusted platform connecting candidates, employees, and investors through innovative
+                    technology and seamless experiences.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#cvModal">
+                        <i class="bi bi-file-earmark-text"></i> Submit Your CV
+                    </button>
+                    <button class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#registerModal">
+                        <i class="bi bi-person-plus"></i> Register
+                    </button>
+                    <button class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        <i class="bi bi-box-arrow-in-right"></i> Login
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Info Sections -->
-    <section id="about" class="info-section text-center">
+    <!-- Stats Section -->
+    <section class="stats-section">
         <div class="container">
-            <h2 class="mb-5 fw-bold text-success">About Our HRMS</h2>
-            <p class="mb-5 fs-5 mx-auto" style="max-width: 800px;">
-                Our Human Resource Management System simplifies recruitment, employee management, and investor relations
-                with innovative tools designed for efficiency and transparency.
-            </p>
             <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="info-card">
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <i class="bi bi-people-fill"></i>
+                        <h3 class="counter" data-target="1500">0</h3>
+                        <p>Active Users</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <i class="bi bi-briefcase-fill"></i>
+                        <h3 class="counter" data-target="350">0</h3>
+                        <p>Job Openings</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <i class="bi bi-building"></i>
+                        <h3 class="counter" data-target="50">0</h3>
+                        <p>Companies</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <i class="bi bi-trophy-fill"></i>
+                        <h3 class="counter" data-target="98">0</h3>
+                        <p>Success Rate %</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Our HRMS</h2>
+                <p class="section-subtitle">
+                    Empowering organizations with intelligent HR solutions for the modern workplace
+                </p>
+            </div>
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <div class="image-placeholder">
+                            <i class="bi bi-diagram-3-fill"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h3>Transform Your HR Operations</h3>
+                        <p>
+                            Our Human Resource Management System simplifies recruitment, employee management, and
+                            investor relations with innovative tools designed for efficiency and transparency.
+                        </p>
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Streamlined recruitment process</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Comprehensive employee management</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Real-time analytics and reporting</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Secure data management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Key Features</h2>
+                <p class="section-subtitle">Everything you need to manage your workforce effectively</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-person-workspace"></i>
+                        </div>
                         <h3>For Candidates</h3>
                         <p>Upload your CV quickly, track your application status, and stay informed about new
-                            opportunities.</p>
+                            opportunities tailored to your skills.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="info-card">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-person-badge"></i>
+                        </div>
                         <h3>For Employees</h3>
-                        <p>Register your profile, access internal resources, and manage your work and benefits with
-                            ease.</p>
+                        <p>Register your profile, access internal resources, manage attendance, leave requests, and
+                            benefits with complete ease.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="info-card">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
                         <h3>For Investors</h3>
-                        <p>Get real-time insights, reports, and updates on company performance and future plans.</p>
+                        <p>Get real-time insights, comprehensive reports, and updates on company performance and future
+                            growth plans.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-calendar-check"></i>
+                        </div>
+                        <h3>Attendance Tracking</h3>
+                        <p>Advanced attendance management with biometric integration, shift planning, and automated
+                            overtime calculations.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-cash-coin"></i>
+                        </div>
+                        <h3>Payroll Management</h3>
+                        <p>Automated payroll processing with tax calculations, salary disbursement, and comprehensive
+                            financial reporting.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h3>Security & Privacy</h3>
+                        <p>Enterprise-grade security with encrypted data storage, role-based access, and compliance with
+                            international standards.</p>
                     </div>
                 </div>
             </div>
@@ -87,27 +207,67 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="info-section text-center">
+    <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="mb-5 fw-bold text-success">Get In Touch</h2>
-            <p class="mb-4 fs-5 mx-auto" style="max-width: 700px;">
-                Have questions or want to learn more about our HRMS? Reach out to us anytime!
-            </p>
-            <p>Email: <a href="mailto: cmrejaulkarim@gmail.com" class="text-success">cmrejaulkarim@gmail.com</a></p>
-            <p>Phone: <a href="tel:+1234567890" class="text-success">+1 234 567 890</a></p>
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Have questions? We're here to help!</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-card">
+                        <i class="bi bi-envelope-fill"></i>
+                        <h4>Email Us</h4>
+                        <a href="mailto:cmrejaulkarim@gmail.com">cmrejaulkarim@gmail.com</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-card">
+                        <i class="bi bi-telephone-fill"></i>
+                        <h4>Call Us</h4>
+                        <a href="tel:+1234567890">+1 234 567 890</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-card">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <h4>Visit Us</h4>
+                        <p>Dhaka, Bangladesh</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 HRMS - Human Resource Management System</p>
-            <div>
-                <a href="https://www.facebook.com/IDK.Username.mine" aria-label="Facebook" target="_blank"><i
-                        class="bi bi-facebook"></i> Facebook</a>
-                <a href="#" aria-label="Twitter" target="_blank"><i class="bi bi-twitter"></i> Twitter</a>
-                <a href="https://www.linkedin.com/in/c-m-rejaul-karim-0039161b1" aria-label="LinkedIn"
-                    target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h4><i class="bi bi-building"></i> HRMS</h4>
+                    <p>Empowering organizations with intelligent HR solutions</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Quick Links</h5>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#features">Features</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <h5>Connect With Us</h5>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/IDK.Username.mine" target="_blank"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/c-m-rejaul-karim-0039161b1" target="_blank"><i
+                                class="bi bi-linkedin"></i></a>
+                        <a href="https://github.com/cmRejaulKarim" target="_blank"><i class="bi bi-github"></i></a>
+                        <a href="mailto:cmrejaulkarim@gmail.com"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 HRMS - Human Resource Management System. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -116,10 +276,11 @@
 
     <!-- CV Upload Modal -->
     <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <form class="modal-content" id="cvForm" enctype="multipart/form-data" onsubmit="return validateCVForm()">
+        <div class="modal-dialog modal-dialog-centered">
+            <form class="modal-content" id="cvForm" enctype="multipart/form-data">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="cvModalLabel">Submit Your CV</h5>
+                    <h5 class="modal-title" id="cvModalLabel"><i class="bi bi-file-earmark-text"></i> Submit Your CV
+                    </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -128,18 +289,23 @@
                         <input type="text" class="form-control" id="candidateName" name="candidateName" required />
                     </div>
                     <div class="mb-3">
-                        <label for="candidateEmail" class="form-label">Email address</label>
+                        <label for="candidateEmail" class="form-label">Email Address</label>
                         <input type="email" class="form-control" id="candidateEmail" name="candidateEmail" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="candidatePhone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="candidatePhone" name="candidatePhone" required />
                     </div>
                     <div class="mb-3">
                         <label for="candidateCV" class="form-label">Upload CV (PDF or DOCX, max 5MB)</label>
                         <input type="file" class="form-control" id="candidateCV" name="candidateCV"
                             accept=".pdf,.doc,.docx" required />
                     </div>
-                    <small class="text-muted">We respect your privacy and will keep your data secure.</small>
+                    <small class="text-muted"><i class="bi bi-shield-check"></i> We respect your privacy and will keep
+                        your data secure.</small>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-success">Submit CV</button>
+                    <button type="submit" class="btn btn-primary">Submit CV</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 </div>
             </form>
@@ -148,10 +314,11 @@
 
     <!-- Employee Register Modal -->
     <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <form class="modal-content" id="registerForm" onsubmit="return validateRegisterForm()">
+        <div class="modal-dialog modal-dialog-centered">
+            <form class="modal-content" id="registerForm">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="registerModalLabel">Employee Registration</h5>
+                    <h5 class="modal-title" id="registerModalLabel"><i class="bi bi-person-plus"></i> Employee
+                        Registration</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -160,7 +327,7 @@
                         <input type="text" class="form-control" id="registerName" name="registerName" required />
                     </div>
                     <div class="mb-3">
-                        <label for="registerEmail" class="form-label">Email address</label>
+                        <label for="registerEmail" class="form-label">Email Address</label>
                         <input type="email" class="form-control" id="registerEmail" name="registerEmail" required />
                     </div>
                     <div class="mb-3">
@@ -173,10 +340,11 @@
                         <input type="password" class="form-control" id="registerConfirmPassword"
                             name="registerConfirmPassword" required minlength="6" />
                     </div>
-                    <small class="text-muted">We'll never share your information with anyone else.</small>
+                    <small class="text-muted"><i class="bi bi-shield-check"></i> Your information will never be shared
+                        with third parties.</small>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-success">Register</button>
+                    <button type="submit" class="btn btn-primary">Register</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 </div>
             </form>
@@ -185,15 +353,16 @@
 
     <!-- Employee Login Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <form class="modal-content" id="loginForm" onsubmit="return validateLoginForm()">
+        <div class="modal-dialog modal-dialog-centered">
+            <form class="modal-content" id="loginForm">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="loginModalLabel">Employee Login</h5>
+                    <h5 class="modal-title" id="loginModalLabel"><i class="bi bi-box-arrow-in-right"></i> Employee
+                        Login</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="loginEmail" class="form-label">Email address</label>
+                        <label for="loginEmail" class="form-label">Email Address</label>
                         <input type="email" class="form-control" id="loginEmail" name="loginEmail" required />
                     </div>
                     <div class="mb-3">
@@ -201,10 +370,17 @@
                         <input type="password" class="form-control" id="loginPassword" name="loginPassword" required
                             minlength="6" />
                     </div>
-                    <small class="text-muted">Forgot your password? Contact HR for assistance.</small>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">
+                            Remember me
+                        </label>
+                    </div>
+                    <small class="text-muted"><i class="bi bi-info-circle"></i> Forgot your password? Contact HR for
+                        assistance.</small>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-success">Login</button>
+                    <button type="submit" class="btn btn-primary">Login</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 </div>
             </form>
@@ -214,8 +390,6 @@
     <!-- Bootstrap JS Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
-
-
 </body>
 
 </html>
