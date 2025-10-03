@@ -2,68 +2,179 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rejaul Karim Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rejaul Karim - Full Stack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="toggle-switch" id="toggleSwitch" title="Toggle Light/Dark Mode">
-    <i class="fas fa-moon"></i>
-  </div>
+    <div class="particles" id="particles"></div>
 
-  <div class="container">
-    <h1>Hi! I am Rejaul Karim</h1>
-    <p class="bio">
-    <h4>a passionate programmer and learner from Bangladesh.</h4>
-    I enjoy programming and have a strong interest in learning new things.</p>
-    <br>
-    
-    <h3>Find me on</h3>
-    <div class="links">
-      <a href="https://github.com/cmRejaulKarim" target="_blank" title="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/c-m-rejaul-karim" target="_blank" title="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="mailto:cmrejaulkarim@gmail.com" title="Email">
-        <i class="fas fa-envelope"></i>
-      </a>
+    <div class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
     </div>
 
-    <div class="projects">
-      <h2>Projects</h2>
-      <ul>
-        <!-- https://github.com/cmRejaulKarim/aNGular/tree/b8_Dependent-list/hrmanagement -->
-        <li><a href="HRM/DemoHRM.html"
-            style="text-decoration: none;">HR Management System _Web Application (using SpringBoot & Angular (Demo UI))</a></li>
-        <li> <a href="https://github.com/cmRejaulKarim/coreJava/tree/main/POS" style="text-decoration: none;">Point of
-            Sale Software (POS_using Java & Mysql)</a></li>
-        <li><a href="Ibbl/index.html" style="text-decoration: none;">Banking Website (IBBL_using html,
-            css & bootstrap)</a></li>
-      </ul>
+    <div class="container">
+        <section class="hero">
+            <h1 class="hero-title">C.M. Rejaul Karim</h1>
+            <h2 class="hero-subtitle">Full Stack Developer</h2>
+            <p class="hero-description">
+                A passionate programmer and learner from Bangladesh with a strong interest in building innovative web
+                applications and solving complex problems through code.
+            </p>
+
+            <div class="social-links">
+                <a href="https://github.com/cmRejaulKarim" target="_blank" class="social-link github" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/c-m-rejaul-karim" target="_blank" class="social-link linkedin"
+                    title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:cmrejaulkarim@gmail.com" class="social-link email" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="projects">
+            <h2 class="section-title">Featured Projects</h2>
+
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-icon">💼</div>
+                    <h3 class="project-title">HR Management System</h3>
+                    <p class="project-description">
+                        A comprehensive web application for managing human resources with features for employee
+                        management, attendance & Leave tracking, and payroll processing.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">Angular</span>
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                    <a href="HRM/DemoHRM.html" class="project-link">
+                        View Demo <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">💊</div>
+                    <h3 class="project-title">Medicine Info</h3>
+                    <p class="project-description">
+                        Android application that provides detailed information about various medicines, including usage,
+                        side effects, and dosage instructions.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Kotlin</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">SQLite</span>
+                    </div>
+                    <a href="https://github.com/cmRejaulKarim/android/tree/main/MedInfo" target="_blank"
+                        class="project-link">
+                        View Code <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">🛒</div>
+                    <h3 class="project-title">Point of Sale System</h3>
+                    <p class="project-description">
+                        A desktop POS application designed for retail businesses with inventory management, sales
+                        tracking, and customer management features.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Swing</span>
+                    </div>
+                    <a href="https://github.com/cmRejaulKarim/coreJava/tree/main/POS" target="_blank"
+                        class="project-link">
+                        View Code <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">🏦</div>
+                    <h3 class="project-title">Banking Website</h3>
+                    <p class="project-description">
+                        A modern, responsive banking website interface built for IBBL with a focus on user experience
+                        and accessibility.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">Bootstrap</span>
+                    </div>
+                    <a href="Ibbl/index.html" class="project-link">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2025 Rejaul Karim. Crafted with passion and code.</p>
+        </footer>
     </div>
-  </div>
 
-  <script>
-    const toggleSwitch = document.getElementById('toggleSwitch');
-    const body = document.body;
-    const icon = toggleSwitch.querySelector('i');
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        const icon = themeToggle.querySelector('i');
 
-    toggleSwitch.addEventListener('click', () => {
-      body.classList.toggle('dark');
-      if (body.classList.contains('dark')) {
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-      } else {
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
-      }
-    });
-  </script>
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light');
+
+            if (body.classList.contains('light')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+
+        // Animated Particles
+        const particlesContainer = document.getElementById('particles');
+        const particleCount = 30;
+
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+
+            const size = Math.random() * 60 + 20;
+            const startX = Math.random() * 100;
+            const startY = Math.random() * 100;
+            const duration = Math.random() * 30 + 25;
+            const delay = Math.random() * 8;
+
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.left = `${startX}%`;
+            particle.style.top = `${startY}%`;
+            particle.style.animationDuration = `${duration}s`;
+            particle.style.animationDelay = `${delay}s`;
+
+            particlesContainer.appendChild(particle);
+        }
+
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

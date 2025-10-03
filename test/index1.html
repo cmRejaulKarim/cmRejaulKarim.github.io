@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rejaul Karim Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="toggle-switch" id="toggleSwitch" title="Toggle Light/Dark Mode">
+    <i class="fas fa-moon"></i>
+  </div>
+
+  <div class="container">
+    <h1>Hi! I am Rejaul Karim</h1>
+    <p class="bio">
+    <h4>a passionate programmer and learner from Bangladesh.</h4>
+    I enjoy programming and have a strong interest in learning new things.</p>
+    <br>
+    
+    <h3>Find me on</h3>
+    <div class="links">
+      <a href="https://github.com/cmRejaulKarim" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/c-m-rejaul-karim" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:cmrejaulkarim@gmail.com" title="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+
+    <div class="projects">
+      <h2>Projects</h2>
+      <ul>
+        <!-- https://github.com/cmRejaulKarim/aNGular/tree/b8_Dependent-list/hrmanagement -->
+        <li><a href="HRM/DemoHRM.html"
+            style="text-decoration: none;">HR Management System _Web Application (using SpringBoot & Angular (Demo UI))</a></li>
+        <li> <a href="https://github.com/cmRejaulKarim/coreJava/tree/main/POS" style="text-decoration: none;">Point of
+            Sale Software (POS_using Java & Mysql)</a></li>
+        <li><a href="Ibbl/index.html" style="text-decoration: none;">Banking Website (IBBL_using html,
+            css & bootstrap)</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const toggleSwitch = document.getElementById('toggleSwitch');
+    const body = document.body;
+    const icon = toggleSwitch.querySelector('i');
+
+    toggleSwitch.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      if (body.classList.contains('dark')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
+    });
+  </script>
+</body>
+
+</html>
