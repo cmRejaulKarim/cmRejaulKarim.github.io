@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Android Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #d3d8d7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            background: #a6a88b;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+
+        .question {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .option {
+            display: block;
+            padding: 10px 15px;
+            margin: 8px 0;
+            background: #eee;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .option:hover {
+            background: #ddd;
+        }
+
+        .correct {
+            background: #7aa87b !important;
+            color: #1e8823;
+        }
+
+        .wrong {
+            background: #af777c !important;
+            color: #c41717;
+        }
+
+        .result {
+            display: none;
+            text-align: center;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #2196f3;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #1976d2;
+        }
+        h3 {
+            margin: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+<h3>Test Yourself</h3>
+        <div id="quiz">
+            <div class="question" id="question"></div>
+            <div id="options"></div>
+        </div>
+        <div class="result" id="result">
+            <h2>Quiz Completed!</h2>
+            <p id="score"></p>
+            <button class="btn" onclick="restartQuiz()">Restart</button>
+        </div>
+    </div>
+
+    <script>
+
+
+        const quizData = [
+            {
+                question: "1. If your app is building but is not installing properly on your device, what is the most likely reason?",
+                options: [
+                    "The app is built for an Android SDK version that is not compatible with your device.",
+                    "The device is not connected to your development machine properly.",
+                    "The device settings have not enabled USB debugging.",
+                    "All of the above"
+                ],
+                answer: 3
+            },
+            {
+                question: "2. Which of the following correctly assigns the content of a TextView using a value defined in the res/values/strings.xml file?",
+                options: [
+                    'android:text="@string/info_text"',
+                    'android:text="@+id/info_text"',
+                    'android:value="@strings/info_text"',
+                    'android:text="@+strings/info_text"'
+                ],
+                answer: 0
+            },
+            {
+                question: "3. In which tab is error shown?",
+                options: ["View", "Memory", "ADB Logs", "Logcat"],
+                answer: 3
+            },
+            {
+                question: "4. What is the function of AndroidManifest.xml in Android?",
+                options: [
+                    "It has the information about activities in an application",
+                    "It has the information about layout in an application",
+                    "It has all the information about an application",
+                    "None of the Above"
+                ],
+                answer: 2
+            },
+            {
+                question: "5. What represents a single user interface screen?",
+                options: ["Service", "Broadcast Receiver", "Content Provider", "Activity"],
+                answer: 3
+            },
+            {
+                question: "6. Which of the following defines a left margin of 10 pixels in an XML View item?",
+                options: [
+                    'android:marginLeft="10dp"',
+                    'android:layout_margin_left="10dp"',
+                    'android:margin_left="10dp"',
+                    'android:layout_marginLeft="10dp"'
+                ],
+                answer: 3
+            },
+            {
+                question: "7. What does the Android project folder 'res/' contain?",
+                options: ["Resource files", "Java source code", "Libraries", "Java Activity classes"],
+                answer: 0
+            },
+            {
+                question: "8. The root element of AndroidManifest.xml is:",
+                options: ["application", "activity", "action", "manifest"],
+                answer: 3
+            },
+            {
+                question: "9. Which IDE is best suited for beginner Android developers?",
+                options: ["Microsoft Visual Studio", "Android Studio", "JBuilder", "Android Dev"],
+                answer: 1
+            },
+            {
+                question: "10. What does ADB stand for?",
+                options: ["Android Data Bot", "Android Debug Bridge", "Android Device Bridge", "Active Digital Brain"],
+                answer: 1
+            },
+            {
+                question: "11. Which of these methods is called first when an Activity is initially launched?",
+                options: ["OonStart()", "onPause()", "onCreate()", "onResume()"],
+                answer: 2
+            },
+            {
+                question: "12. Which of the following layout arranges its children into rows and columns?",
+                options: ["RelativeLayout", "TableLayout", "FrameLayout", "None"],
+                answer: 1
+            },
+            {
+                question: "13. What is the use of AndroidManifest.xml file?",
+                options: [
+                    "It declares the permissions of the application",
+                    "It declares the minimum level of the Android API that the application requires",
+                    "It facilitates to provide a unique name for the application by specifying package name",
+                    "All"
+                ],
+                answer: 3
+            },
+            {
+                question: "14. Which of the following correctly applies a style saved within an XML file in the res/values folder to a View in a layout file?",
+                options: [
+                    'style-"@style/MyStyle"',
+                    'android:style="@style/MyStyle"',
+                    'android:style="MyStyle"'
+                ],
+                answer: 1
+            },
+            {
+                question: "15. What does android:showAsAction=\"ifRoom\" specify?",
+                options: [
+                    "the item must always appear in the Action Bar",
+                    "the item must always appear in the overflow menu",
+                    "the item should appear in the Action Bar if there is room, otherwise appearing in the overflow menu",
+                    "the item should appear in the overflow menu if there is room, otherwise appearing in the Action Bar"
+                ],
+                answer: 2
+            },
+            {
+                question: "16. What is the name of the class which is inherited to create a user interface screen?",
+                options: ["Activity", "None of these", "ViewGroup", "View"],
+                answer: 0
+            },
+            {
+                question: "17. Which compiler converts Java byte code into Dalvik byte code?",
+                options: ["Logout", "Dalvik Converter", "Android Interpretive Compiler", "Dex compiler"],
+                answer: 3
+            },
+            {
+                question: "18. In apps developed for Android 3.0 and higher, options menu items appear in the Action Bar.",
+                options: ["True", "False"],
+                answer: 0
+            },
+            {
+                question: "19. Which of the following is the correct outline for the 'onClick' method in an OnClickListener?",
+                options: [
+                    "public void onClick(Activity a)",
+                    "public void onClick(View v)",
+                    "public void onClick(Context c)",
+                    "public View onClick(this)"
+                ],
+                answer: 1
+            },
+            {
+                question: "20. Which of the following is a method of the View class which allows you to set the Layout Parameters, passing a ViewGroup as parameter?",
+                options: ["setLayoutParams", "setLayoutParameters", "setParameters", "layoutParams"],
+                answer: 0
+            },
+            {
+                question: "21. The XML file that contains all the text that your application uses:",
+                options: ["text.xml", "strings.xml", "string.java", "stack.xml"],
+                answer: 1
+            },
+            {
+                question: "22. Action bar can be associated to:",
+                options: ["Only Fragments", "Only Activities", "Both Activities and Fragments", "None"],
+                answer: 2
+            },
+            {
+                question: "23. The basic building element of Android's user interface is called:",
+                options: ["Activity", "ViewGroup", "View", "ContentProvider"],
+                answer: 2
+            },
+            {
+                question: "24. Which of the following is used to bind data to a layout View?",
+                options: ["Activity", "Context", "Intent", "Adapter"],
+                answer: 3
+            },
+            {
+                question: "25. Which of the following must be supplied for each View in an Android XML layout?",
+                options: [
+                    "id and lavout_width",
+                    "width and height",
+                    "id and layout_weight",
+                    "layout_width and layout_height"
+                ],
+                answer: 3
+            }
+        ];
+
+
+        let currentQuestion = 0;
+        let correctAnswers = 0;
+        let wrongAnswers = 0;
+
+        function loadQuestion() {
+            const q = quizData[currentQuestion];
+            document.getElementById("question").textContent = q.question;
+            const optionsDiv = document.getElementById("options");
+            optionsDiv.innerHTML = "";
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement("div");
+                btn.classList.add("option");
+                btn.textContent = opt;
+                btn.onclick = () => selectAnswer(idx, btn);
+                optionsDiv.appendChild(btn);
+            });
+        }
+
+        function selectAnswer(selectedIdx, element) {
+            const correctIdx = quizData[currentQuestion].answer;
+            const allOptions = document.querySelectorAll(".option");
+
+            if (selectedIdx === correctIdx) {
+                element.classList.add("correct");
+                correctAnswers++;
+            } else {
+                element.classList.add("wrong");
+                allOptions[correctIdx].classList.add("correct");
+                wrongAnswers++;
+            }
+
+            // Disable all options after selection
+            allOptions.forEach(opt => opt.onclick = null);
+
+            // Move to next question after 1 second
+            setTimeout(() => {
+                currentQuestion++;
+                if (currentQuestion < quizData.length) {
+                    loadQuestion();
+                } else {
+                    showResult();
+                }
+            }, 1000);
+        }
+
+        function showResult() {
+            document.getElementById("quiz").style.display = "none";
+            document.getElementById("result").style.display = "block";
+            document.getElementById("score").textContent = `Correct: ${correctAnswers}, Incorrect: ${wrongAnswers}`;
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            correctAnswers = 0;
+            wrongAnswers = 0;
+            document.getElementById("quiz").style.display = "block";
+            document.getElementById("result").style.display = "none";
+            loadQuestion();
+        }
+
+        // Load the first question when page loads
+        loadQuestion();
+
+    </script>
+
+</body>
+
+</html>
